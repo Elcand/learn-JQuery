@@ -8,11 +8,14 @@
 </head>
 
 <body>
-    <h1 id="judul">Halo Dunia!</h1>
+    <h1 id="judul">Selamat Datang</h1>
+    <button id="tombol">Ubah Warna</button>
 
     <script>
         $(document).ready(function () {
-            $("#judul").css("color", "blue");
+            $("#tombol").click(function () {
+                $("#judul").css("color", "green");
+            });
         });
     </script>
 </body>
