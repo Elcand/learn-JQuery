@@ -8,27 +8,13 @@
 </head>
 
 <body>
-    <div id="title">Hello World</div>
-    <div class="content">This is content!</div>
-    <!-- <div class="container">
-        <div class="row"> -->
-            <input type="text" id="name" value="Edi">
-        <!-- </div>
-    </div> -->
+    <button id="btn" type="submit">Save</button>
 </body>
 <script>
     $(document).ready(function () {
-        $("#title").text("Welcome!");
-        let text = $("#title").text(); // manipulation .text()
-        console.log(text);
-
-        $(".content").html("<strong style='color:darkblue;'>Hello</strong>");
-        let html = $(".content").html(); // manipulation .html()
-        console.log(html);
-
-        $("#name").val("Ikel");
-        let name = $("#name").val("Mikel"); // manipulation .val()
-        console.log(name)
+        $("#btn").click(function () {
+            alert("Button has been clicked");
+        });
     });
 </script>
 
