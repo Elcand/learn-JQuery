@@ -8,16 +8,32 @@
 </head>
 
 <body>
-    <h1 id="judul">Selamat Datang</h1>
-    <button id="tombol">Ubah Warna</button>
-
-    <script>
-        $(document).ready(function () {
-            $("#tombol").click(function () {
-                $("#judul").css("color", "green");
-            });
-        });
-    </script>
+    <h1 id="title">Hello World</h1>
+    <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus odit ipsa rem illum
+        iusto unde labore minus quas qui temporibus. Ad incidunt laborum laudantium doloremque porro commodi ducimus,
+        blanditiis similique?</div>
+    <p>Paragraf 1</p>
+    <p id="paragraf">Paragraf 2</p>
+    <div>
+        <p>Ini di dalam div</p>
+    </div>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <input type="text" name="email">
 </body>
+<script>
+    $(document).ready(function () {
+        $("#title").text("Hello Ikel!!");
+        $(".description").css("color", "blue");
+        $("h1, #paragraf").fadeOut();
+        $('div p').css("font-weight", "bold");
+        $("input[name='email']").val("ikel123@gmail.com");
+        $("p:first").css("color", "red");
+        $("li:odd").css("background-color", "#eee");
+    });
+</script>
 
 </html>
