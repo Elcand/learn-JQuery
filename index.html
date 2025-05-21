@@ -8,31 +8,27 @@
 </head>
 
 <body>
-    <h1 id="title">Hello World</h1>
-    <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus odit ipsa rem illum
-        iusto unde labore minus quas qui temporibus. Ad incidunt laborum laudantium doloremque porro commodi ducimus,
-        blanditiis similique?</div>
-    <p>Paragraf 1</p>
-    <p id="paragraf">Paragraf 2</p>
-    <div>
-        <p>Ini di dalam div</p>
-    </div>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
-    <input type="text" name="email">
+    <div id="title">Hello World</div>
+    <div class="content">This is content!</div>
+    <!-- <div class="container">
+        <div class="row"> -->
+            <input type="text" id="name" value="Edi">
+        <!-- </div>
+    </div> -->
 </body>
 <script>
     $(document).ready(function () {
-        $("#title").text("Hello Ikel!!");
-        $(".description").css("color", "blue");
-        $("h1, #paragraf").fadeOut();
-        $('div p').css("font-weight", "bold");
-        $("input[name='email']").val("ikel123@gmail.com");
-        $("p:first").css("color", "red");
-        $("li:odd").css("background-color", "#eee");
+        $("#title").text("Welcome!");
+        let text = $("#title").text(); // manipulation .text()
+        console.log(text);
+
+        $(".content").html("<strong style='color:darkblue;'>Hello</strong>");
+        let html = $(".content").html(); // manipulation .html()
+        console.log(html);
+
+        $("#name").val("Ikel");
+        let name = $("#name").val("Mikel"); // manipulation .val()
+        console.log(name)
     });
 </script>
 
