@@ -5,30 +5,35 @@
     <meta charset="UTF-8">
     <title>Hello jQuery</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #box,
+        #panel {
+            width: 200px;
+            height: 100px;
+            margin-top: 10px;
+            background-color: lightblue;
+            padding: 10px;
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="title">Hello World</div>
-    <div class="content">This is content!</div>
-    <!-- <div class="container">
-        <div class="row"> -->
-            <input type="text" id="name" value="Edi">
-        <!-- </div>
-    </div> -->
+    <button id="hide">Hide Box</button>
+    <button id="show">Show Box</button>
+
+    <div id="box">Ini adalah Box</div>
+    <div id="panel">Ini adalah Panel</div>
+
 </body>
 <script>
     $(document).ready(function () {
-        $("#title").text("Welcome!");
-        let text = $("#title").text(); // manipulation .text()
-        console.log(text);
-
-        $(".content").html("<strong style='color:darkblue;'>Hello</strong>");
-        let html = $(".content").html(); // manipulation .html()
-        console.log(html);
-
-        $("#name").val("Ikel");
-        let name = $("#name").val("Mikel"); // manipulation .val()
-        console.log(name)
+        $("#hide").click(function () {
+            $("#box").hide(1000);
+        });
+        $("#show").click(function () {
+            $("#box").show(1000);
+        });
     });
 </script>
 
