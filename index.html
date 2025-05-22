@@ -8,12 +8,19 @@
 </head>
 
 <body>
-    <button id="btn" type="submit">Save</button>
+    <form id="form-input" action="">
+        <div style="margin: 10px;">
+            <lable for="name" id="name" placeholder="Input your name"></lable>
+            <input id="input-name" type="text">
+        </div>
+        <button id="btn" type="submit">Save</button>
+    </form>
 </body>
 <script>
     $(document).ready(function () {
-        $("#btn").click(function () {
-            alert("Button has been clicked");
+        $("#form-input").submit(function (e) {
+            e.preventDefault(); // mencegah reload halaman
+            alert("Form summited Succeses!");
         });
     });
 </script>
