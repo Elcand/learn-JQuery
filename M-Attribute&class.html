@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+    <a id="link" href="https://example.com" target="_blank">Kunjungi Website</a>
+    <br><br>
+
+    <button id="changeLink">Change Link</button>
+    <button id="removeTarget">Remove Target</button>
+    <br><br>
+
+</body>
+<script>
+    $(document).ready(function () {
+        $("#changeLink").click(function () {
+            $("#link").attr("href", "https://github.com/Elcand");
+        });
+        $("#removeTarget").click(function () {
+            $("#link").removeAttr("target");
+        });
+    });
+</script>
+
+</html>
