@@ -21,6 +21,8 @@
 <body>
     <button id="hide">Hide Box</button>
     <button id="show">Show Box</button>
+    <button id="fadein">FadeIn Box</button>
+    <button id="fadeout">FadeOut Box</button>
 
     <div id="box">Ini adalah Box</div>
     <div id="panel">Ini adalah Panel</div>
@@ -33,6 +35,12 @@
         });
         $("#show").click(function () {
             $("#box").show(1000);
+        });
+        $("#fadein").click(function () {
+            $("#box").fadeIn();
+        });
+        $("#fadeout").click(function () {
+            $("#box").fadeOut();
         });
     });
 </script>
