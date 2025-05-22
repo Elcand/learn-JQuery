@@ -23,6 +23,7 @@
     <button id="show">Show Box</button>
     <button id="fadein">FadeIn Box</button>
     <button id="fadeout">FadeOut Box</button>
+    <button id="fadetoggle">FadeToggle Box</button>
 
     <div id="box">Ini adalah Box</div>
     <div id="panel">Ini adalah Panel</div>
@@ -41,6 +42,9 @@
         });
         $("#fadeout").click(function () {
             $("#box").fadeOut();
+        });
+        $("#fadetoggle").click(function () {
+            $("#box").fadeToggle();
         });
     });
 </script>
