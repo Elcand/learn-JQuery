@@ -8,27 +8,39 @@
 </head>
 
 <body>
-    <div id="title">Hello World</div>
-    <div class="content">This is content!</div>
-    <!-- <div class="container">
-        <div class="row"> -->
-            <input type="text" id="name" value="Edi">
-        <!-- </div>
-    </div> -->
+    <form id="form-input" action="">
+        <div style="margin: 10px;">
+            <input id="name" placeholder="Input your name" type="text">
+        </div>
+        <button id="box" type="submit">Save</button>
+    </form>
+
+    <div id="box" style="width: 100px; height: 100px; border: 1px solid black;"></div>
+
+    <select id="pilihan">
+        <option value="A">Pilihan A</option>
+        <option value="B">Pilihan B</option>
+    </select>
+
 </body>
 <script>
     $(document).ready(function () {
-        $("#title").text("Welcome!");
-        let text = $("#title").text(); // manipulation .text()
-        console.log(text);
+        $("#form-input").submit(function (e) {
+            e.preventDefault(); // mencegah reload halaman
+            alert("Form summited Succeses!");
+        });
 
-        $(".content").html("<strong style='color:darkblue;'>Hello</strong>");
-        let html = $(".content").html(); // manipulation .html()
-        console.log(html);
+        $("#pilihan").change(function () {
+            alert("Pilihan berubah menjadi: " + $(this).val());
+        });
 
-        $("#name").val("Ikel");
-        let name = $("#name").val("Mikel"); // manipulation .val()
-        console.log(name)
+        $("#box").mouseenter(function () {
+            $(this).css("background-color", "#dff");
+        });
+
+        $("#box").mouseleave(function () {
+            $(this).css("background-color", "#fff");
+        });
     });
 </script>
 
