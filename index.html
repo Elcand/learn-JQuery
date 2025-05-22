@@ -10,11 +10,16 @@
 <body>
     <form id="form-input" action="">
         <div style="margin: 10px;">
-            <lable for="name" id="name" placeholder="Input your name"></lable>
-            <input id="input-name" type="text">
+            <input id="name" placeholder="Input your name" type="text">
         </div>
-        <button id="btn" type="submit">Save</button>
+        <button id="box" type="submit">Save</button>
     </form>
+
+    <select id="pilihan">
+        <option value="A">Pilihan A</option>
+        <option value="B">Pilihan B</option>
+    </select>
+
 </body>
 <script>
     $(document).ready(function () {
@@ -22,6 +27,10 @@
             e.preventDefault(); // mencegah reload halaman
             alert("Form summited Succeses!");
         });
+
+        $("#pilihan").change(function () {
+            alert("Pilihan berubah menjadi: " + $(this).val());
+        })
     });
 </script>
 
