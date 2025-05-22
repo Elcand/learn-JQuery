@@ -24,6 +24,9 @@
     <button id="fadein">FadeIn Box</button>
     <button id="fadeout">FadeOut Box</button>
     <button id="fadetoggle">FadeToggle Box</button>
+    <button id="slidedown">SlideDown Box</button>
+    <button id="slideup">SlideUp Box</button>
+    <button id="slidetoggle">SlideTogglr Box</button>
 
     <div id="box">Ini adalah Box</div>
     <div id="panel">Ini adalah Panel</div>
@@ -45,6 +48,15 @@
         });
         $("#fadetoggle").click(function () {
             $("#box").fadeToggle();
+        });
+        $("#slidedown").click(function () {
+            $("#box").slideDown();
+        });
+        $("#slideup").click(function () {
+            $("#box").slideUp();
+        });
+        $("#slidetoggle").click(function () {
+            $("#box").slideToggle();
         });
     });
 </script>
