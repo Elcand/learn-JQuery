@@ -21,6 +21,10 @@
     <button id="removeTarget">Remove Target</button>
     <br><br>
 
+    <div id="box">Ini adalah kotak</div>
+    <button id="addClass">Add Class</button>
+    <button id="removeClass">Remove Class</button>
+    <button id="toggleClass">Toggle Class</button>
 </body>
 <script>
     $(document).ready(function () {
@@ -29,6 +33,17 @@
         });
         $("#removeTarget").click(function () {
             $("#link").removeAttr("target");
+        });
+        $("#addClass").click(function () {
+            $("#box").addClass("highlight");
+        });
+
+        $("#removeClass").click(function () {
+            $("#box").removeClass("highlight");
+        });
+
+        $("#toggleClass").click(function () {
+            $("#box").toggleClass("highlight");
         });
     });
 </script>
