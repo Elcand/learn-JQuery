@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="formKontak">
+        <input type="text" name="nama" id="nama" placeholder="Nama"><br><br>
+        <input type="email" name="email" id="email" placeholder="Email"><br><br>
+        <button type="submit">Kirim</button>
+    </form>
+
+    <div id="hasil" style="margin-top:20px;"></div>
+
+</body>
+<script>
+    $(document).ready(function () {
+        $.get("#formKontak").submit(function (e) {
+            e.preventDefault();
+            let name = $("name").val();
+            let email = $("email").val();
+            $.post("proses.php", { nama: nama, email: email }, function (data) {
+                $("#hasil").html("<p>" + data + "</p>");
+            });
+        });
+    });
+</script>
+
+</html>
