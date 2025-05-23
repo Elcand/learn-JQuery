@@ -30,12 +30,16 @@
     <p id="paragraf">Ini adalah paragraf dalam container.</p>
 
     <button id="highlightParent">Highlight Parent</button>
+    <button id="highlightSiblings">Highlight Siblings</button>
 </body>
 
 <script>
     $(document).ready(function () {
         $("#highlightParent").click(function () {
             $("#paragraf").parent().css("border", "1px dashed red");
+        });
+        $("#highlightSiblings").click(function () {
+            $(".aktif").siblings().css("background", "lightgray");
         });
     });
 </script>
