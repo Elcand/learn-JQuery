@@ -33,6 +33,7 @@
     <button id="highlightSiblings">Highlight Siblings</button>
     <button id="highlightPrev">Highlight Prev</button>
     <button id="highlightNext">Highlight Next</button>
+    <button id="highlightChildren">Highlight Children</button>
 </body>
 
 <script>
@@ -48,6 +49,9 @@
         });
         $("#highlightNext").click(function () {
             $(".aktif").next().css("border", "2px solid orange");
+        });
+        $("#highlightChildren").click(function () {
+            $("#container").children().css("color", "blue");
         });
     });
 </script>
