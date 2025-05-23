@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .item {
+            padding: 8px;
+            margin: 4px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <button id="button" class="btn">Click</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            let $btn = $("#button");
+            $btn.text("Save").addClass("active");
+            $btn.on("click", function () {
+                $(".container").append('<div class="item">new item</div>');
+            });
+
+            $(document).on("click", ".item", function () {
+                alert("Item diklik!");
+            });
+        });
+    </script>
+</body>
+
+</html>
