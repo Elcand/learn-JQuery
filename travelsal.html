@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .box {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .aktif {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="box">Box 1</div>
+        <div class="box aktif">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+    </div>
+
+    <p id="paragraf">Ini adalah paragraf dalam container.</p>
+
+    <button id="highlightParent">Highlight Parent</button>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("#highlightParent").click(function () {
+            $("#paragraf").parent().css("border", "1px dashed red");
+        });
+    });
+</script>
+
+</html>
