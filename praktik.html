@@ -25,30 +25,75 @@
             margin-top: 10px;
             border: 1px dashed darkblue;
         }
+
+        #notif {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #222;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        #notif-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        .toast {
+            background-color: #323232;
+            color: #fff;
+            padding: 12px 16px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 0.3s forwards, fadeOut 0.3s forwards 2.5s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="container"></div>
-    <div id="box"></div>
+    <div id="box">Ini box yang dislide.</div>
     <button id="button" class="btn">Click</button>
+    <div id="notif-container"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(function () {
-            let $btn = $("#button");
-            $btn.text("Save").addClass("active");
-            $btn.on("click", function () {
-                $(".container").append('<div class="item">new item</div>');
-            });
-
-            $(document).on("click", ".item", function () {
-                alert("Item diklik!");
-            });
-
-            $("#box").css("color", "darkblue").slideDown().addClass("active");
-        });
-    </script>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        let $btn = $("#button");
+        $btn.text("Save").addClass("active");
+        $btn.on("click", function () {
+            $(".container").append('<div class="item">new item</div>');
+            showNotif("Item baru berhadil ditambahkan!");
+        });
+
+        $(document).on("click", ".item", function () {
+            alert("Item diklik!");
+        });
+
+        $("#box").css("color", "darkblue").slideDown().addClass("active");
+    });
+</script>
+<script src="./script.js"></script>
 
 </html>
