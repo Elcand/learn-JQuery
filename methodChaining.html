@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Method Chaining</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #kotak {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+            line-height: 200px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="kotak">Box</div>
+    <button id="animasi">Jalankan Animasi</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#animasi").click(function () {
+                $("#kotak")
+                    .slideUp(200)
+                    .slideDown(200)
+                    .css("background-color", "green")
+                    .text("Sudah berubah!");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
