@@ -18,15 +18,27 @@
 
 </body>
 <script>
-    $(document).ready(function () {
-        $.get("#formKontak").submit(function (e) {
-            e.preventDefault();
-            let name = $("name").val();
-            let email = $("email").val();
-            $.post("proses.php", { nama: nama, email: email }, function (data) {
-                $("#hasil").html("<p>" + data + "</p>");
-            });
-        });
+    // $(document).ready(function () {
+    //     $.get("#formKontak").submit(function (e) {
+    //         e.preventDefault();
+    //         let name = $("name").val();
+    //         let email = $("email").val();
+    //         $.post("proses.php", { nama: nama, email: email }, function (data) {
+    //             $("#hasil").html("<p>" + data + "</p>");
+    //         });
+    //     });
+    // });
+
+    $.ajax({
+        url: "ajax.html",
+        method: "POST",
+        data: { nama: "ikel", email: "ikel@mail.com" },
+        success: function (respon) {
+            console.log(respon);
+        },
+        error: function (err) {
+            console.log("Terjadi kesalahan:", err);
+        }
     });
 </script>
 
